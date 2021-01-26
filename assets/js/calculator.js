@@ -52,11 +52,9 @@
         }
             
         function createArray(){
-            numberValue = parseInt(prompt("Enter the numbers separeted by comma or space"));
-            for(i=0;i<numberValue;i++){
-                arrayOfNumbers[i] =parseInt(prompt("Enter the " +(i+1) + " element"))
-            };
-            return arrayOfNumbers;
+           let  numberValue = prompt("Enter the numbers separeted by space");
+            
+            return numberValue.split(" ").map(item=>parseInt(item));
         }
         getUserChoice()
         while(choice){
@@ -103,6 +101,7 @@
             }break
             case 8: {
                 alert("The average is " + average(createArray()))
+                getUserChoice()
             }break
             default:
                 alert("no input detected")
